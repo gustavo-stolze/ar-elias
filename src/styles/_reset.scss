@@ -1,0 +1,32 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --firstColor: #305d7f;
+  --secondColor: #44749d;
+  --thirdColor: #c6d4e1;
+  --fourthColor: #ebe7e0;
+  --fifthColor: #a59f93;
+  --sixthColor: #68655f;
+  --firstFont: "LTSaedaBlack";
+  --secondFont: "LTSaedaMedium";
+  --thirdFont: "LTSaedaThin";
+}
+
+@font-face {
+  font-family: LTSaedaBlack;
+  src: url("../assets/fonts/LTSaeada-Black.otf");
+}
+
+@font-face {
+  font-family: LTSaedaMedium;
+  src: url("../assets/fonts/LTSaeada-Medium.otf");
+}
+
+@font-face {
+  font-family: LTSaedaThin;
+  src: url("../assets/fonts/LTSaeada-Thin.otf");
+}
