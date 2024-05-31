@@ -1,1 +1,47 @@
-<p>navbar works!</p>
+<nav class="nav">
+    <div class="nav__logo" routerLink="/">
+        <img src="../../../assets/images/logo.png" />
+    </div>
+    <ul class="nav__list">
+        <li class="nav__list-item">
+            <a routerLink="/" [attr.selectedRoute]="currentPath === '/' || currentPath === ''">
+                Home
+            </a>
+        </li>
+        <li class="nav__list-item">
+            <a routerLink="/about" [attr.selectedRoute]="currentPath === '/about'">
+                Sobre nós
+            </a>
+        </li>
+        <li class="nav__list-item">
+            <a routerLink="/products" [attr.selectedRoute]="currentPath === '/products'">
+                Produtos
+            </a>
+        </li>
+        <li class="nav__list-item">
+            <a routerLink="/services" [attr.selectedRoute]="currentPath === '/services'">
+                Serviços
+            </a>
+        </li>
+        <li class="nav__list-item">
+            <a routerLink="/contact" [attr.selectedRoute]="currentPath === '/contact'">
+                Contatos
+            </a>
+        </li>
+    </ul>
+    <div class="nav__menu" (click)="isMenuOpen = !isMenuOpen">
+        <button class="hamburger" [attr.isMenuOpen]="isMenuOpen"></button>
+    </div>
+    <div class="popMenu" [ngStyle]="{
+        'right': isMenuOpen ? '0' : '-50%'
+    }">
+        <ul class="popMenu__list">
+            <li class="popMenu__list-item">
+                <a routerLink="/">Suporte</a>
+            </li>
+            <li class="popMenu__list-item">
+                <a routerLink="/">Feedback</a>
+            </li>
+        </ul>
+    </div>
+</nav>
